@@ -8,6 +8,8 @@ function PaperCard({ paper, setCurrentPreviewPaper, removePaper, setCurrentNoteP
         <div>
           <Card.Title>{paper.shortName}</Card.Title>
           <Card.Text>{paper.title}</Card.Text>
+          <Card.Text><em>{paper.journal} {paper.year}</em></Card.Text>
+          <Card.Text>{paper.authors}</Card.Text>
         </div>
         <br />
         <div>
