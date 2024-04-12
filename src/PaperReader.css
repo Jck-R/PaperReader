@@ -1,0 +1,52 @@
+/* There should be two status of dashboard and preview. First is Left/Right 50/50, second is 100/0 (Preview hidden)*/
+
+main {
+  height: 100vh;
+  background-color: beige;
+}
+
+.dashboard {
+  width: 50%;
+  height: 100%;
+  float: left;
+  overflow: auto;
+  padding: 20px;
+}
+
+.preview {
+  width: 50%;
+  height: 100%;
+  float: right;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper-cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.paper-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.center {
+  margin: 1rem 0;
+  display: grid;
+  place-items: center;
+}
+
+.note {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.hidden {
+  display: none;
+}
