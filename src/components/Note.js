@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import { Button, ButtonGroup, Modal } from 'react-bootstrap';
 
 function Note({ currentNotePaperName, papers, handleNoteChange }) {
+    // Get the title of the current note paper
     const title = currentNotePaperName === null ? null : papers.find(paper => paper.shortName === currentNotePaperName).title;
+    // State to store the change log modal
     const [changeLog, setChangeLog] = useState(null);
 
+    // Function to show the note change log modal
     const showNoteLog = () => {
-        // A Modal showing all logs in paper.notes
+        // Find the paper with the current note paper name
         const paper = papers.find(paper => paper.shortName === currentNotePaperName);
         if (paper.notes) {
+            // Set the change log modal content
             setChangeLog(
                 <Modal show={true} onHide={() => setChangeLog(null)}>
                     <Modal.Header closeButton>

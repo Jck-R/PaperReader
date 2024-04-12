@@ -4,8 +4,10 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
 function AddPaperButton({ setPapers }) {
-  const [show, setShow] = useState(false);
+  // State variables
+  const [show, setShow] = useState(false); // Controls the visibility of the modal
   const [paperInfo, setPaperInfo] = useState({
+    // Stores the information entered by the user
     shortName: '',
     title: '',
     authors: '',
@@ -14,16 +16,18 @@ function AddPaperButton({ setPapers }) {
     previewURL: '',
   });
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // Event handlers
+  const handleClose = () => setShow(false); // Closes the modal
+  const handleShow = () => setShow(true); // Shows the modal
 
   const handleInputChange = (e) => {
+    // Updates the paperInfo state when the user enters information in the form inputs
     const { name, value } = e.target;
     setPaperInfo({ ...paperInfo, [name]: value });
   };
 
   const handleAddPaper = () => {
-    // Add paper to the list of papers
+    // Adds the paper to the list of papers and closes the modal
     setPapers((papers) => {
       return [
         ...papers,
@@ -42,16 +46,18 @@ function AddPaperButton({ setPapers }) {
 
   return (
     <>
+      {/* Button to open the modal */}
       <Button variant="primary" onClick={handleShow}>
         Add Paper
       </Button>
 
+      {/* Modal */}
       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
         <Modal.Header closeButton>
           <Modal.Title>Paper Info</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* Some paper information inputs, including: Paper short name; paper title; authors; journal; year; Preview URL */}
+          {/* Form inputs for paper information */}
           <Form>
             <Form.Group className="mb-3" controlId="formBasicName">
               <Form.Label>Paper Short Name</Form.Label>
@@ -116,6 +122,7 @@ function AddPaperButton({ setPapers }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
+          {/* Buttons to cancel or add the paper */}
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
