@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Jck-R/PaperReader/static/css/main.b0675056.css",
-    "main.js": "/Jck-R/PaperReader/static/js/main.9960918e.js",
-    "static/js/453.989e52ff.chunk.js": "/Jck-R/PaperReader/static/js/453.989e52ff.chunk.js",
-    "index.html": "/Jck-R/PaperReader/index.html",
-    "main.b0675056.css.map": "/Jck-R/PaperReader/static/css/main.b0675056.css.map",
-    "main.9960918e.js.map": "/Jck-R/PaperReader/static/js/main.9960918e.js.map",
-    "453.989e52ff.chunk.js.map": "/Jck-R/PaperReader/static/js/453.989e52ff.chunk.js.map"
+    "main.css": "/static/css/main.b0675056.css",
+    "main.js": "/static/js/main.ba1951ab.js",
+    "static/js/453.989e52ff.chunk.js": "/static/js/453.989e52ff.chunk.js",
+    "index.html": "/index.html",
+    "main.b0675056.css.map": "/static/css/main.b0675056.css.map",
+    "main.ba1951ab.js.map": "/static/js/main.ba1951ab.js.map",
+    "453.989e52ff.chunk.js.map": "/static/js/453.989e52ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b0675056.css",
-    "static/js/main.9960918e.js"
+    "static/js/main.ba1951ab.js"
   ]
 }
